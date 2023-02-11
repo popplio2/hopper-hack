@@ -6,13 +6,45 @@ body,
   padding: 0;
   box-sizing: border-box;
 }
+.anim-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 50rem;
+  height: 75rem;
+}
 .paper {
+  position: absolute;
+  top: 0;
   background-color: gray;
   width: 10rem;
   height: 10rem;
+  margin-top: 0;
+  border-radius: 100%;
+  animation: drop 2s forwards;
 }
 .trash-can {
+  bottom: 0;
+  position: absolute;
   background-color: black;
   width: 20rem;
   height: 20rem;
+  animation: rise 1s forwards;
+}
+
+@keyframes drop {
+  from {
+    top: 0;
+  }
+  to {
+    top: 40rem;
+  }
+}
+@keyframes rise {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 10rem;
+  }
 }
