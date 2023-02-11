@@ -8,3 +8,7 @@ throw2.addEventListener("click", console.log("hi"));
 
 const text = document.getElementById("text");
 
+function crumplePaper () {
+	let crumple = new Audio('Paper Crumple Crumpling Scrunch Crunch Sfx.wav');
+	crumple.play();
+}
